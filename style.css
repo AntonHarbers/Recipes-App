@@ -1,31 +1,192 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
+  cursor: default;
+  background-color: transparent;
+  user-select: none;
+}
+/* make background color behind body and divs the same */
+
+html {
+  background-color: #fccf31;
 }
 
-body{
-    background-color: #c5c5c5;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+body {
+  /* food themed background gradient */
+  background: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100dvw;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
 }
 
-p{
-    width: 50%;
+h1 {
+  color: white;
+  font-size: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-li{
-    margin-top: 2px;
-    margin-bottom: 2px;
+h2 {
+  color: white;
+  font-size: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 
-img{
-    border-radius: 20px;
-    border: 1px solid white;
-    height: 40rem;
+.linkBtn {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 10;
 }
 
+.linkBtn:hover {
+  background-color: white;
+  color: #e0611c;
+  cursor: pointer;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  width: 50%;
+  text-align: start;
+  color: white;
+  line-height: 2rem;
+  background-color: #0f20bb29;
+  padding: 2rem;
+  transition: 0.3s ease;
+  border-radius: 20px;
+}
+
+p:hover {
+  background-color: #bb2e0f;
+  transition: 0.3s;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+img {
+  border-radius: 20px;
+  border: 1px solid white;
+  height: 40rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+ul {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f20bb29;
+  padding: 2rem;
+  border-radius: 20px;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+ul:hover {
+  background-color: #bb2e0f;
+  transition: 0.3s;
+  transform: scale(1.1) rotate(5deg);
+}
+
+ol {
+  width: 50%;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f20bb29;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+ol:hover {
+  background-color: #bb2e0f;
+  transition: 0.3s;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+#backBtn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 2rem;
+  color: white;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 900;
+}
+
+#backBtn:hover {
+  background-color: white;
+  color: #1cb5e0;
+  cursor: pointer;
+}
+
+img {
+  border-radius: 20px;
+  border: 1px solid white;
+  height: 40rem;
+  z-index: 10;
+  transition: 1s ease-in-out;
+}
+img:hover {
+  transform: scale(1.1) rotate(5deg);
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f20bb29;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bb2e0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0611c;
+}

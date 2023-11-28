@@ -4,42 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type ="text/css" href="../style.css">
-
+    <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
-    <h1>Tofu Scramble</h1>
-    <img src="https://l8.nu/rWaq" alt="Tofu Scramble Picture" />
-    <h2>Description</h2>
-    <p>
-      Tofu scramble is a tasty, healthy, vegan and easy to make alternative to
-      scrambles eggs. It's a great way to start your day! The recipe below is
-      very versitile, feel free to experiment with different textures and
-      ingredients to create your own version. The recipe below is enough for 3-4
-      portions.
-    </p>
-    <h2>Ingredients</h2>
-    <ul>
-      <li>1 block of firm tofu</li>
-      <li>15 baby tomatoes</li>
-      <li>100 g of fresh spinach</li>
-      <li>1 tablespoon of olive oil</li>
-      <li>100 g of brown cap mushrooms</li>
-      <li>1 green bell pepper</li>
-      <li>2 teaspoons of tumeric</li>
-      <li>2 teaspoons of black salt (kala namak)</li>
-      <li>1 medium sized onion</li>
-    </ul>
-    <h2>Steps</h2>
-    <ol>
-        <li>Break up the block of tofu using your hands into as fine of a scramble consitency as you like and add to a bowl</li>
-        <li>Add the tumeric and black salt to the scrambled tofu and mix well</li>
-        <li>Chop up your spinach, mushrooms, bell pepper, tomatoes and onion into your preferred size</li>
+    <a href="/" id="backBtn"><</a>
+    <div class="container">
+      <h1>Tofu Scramble</h1>
+      <img
+        src="https://thehiddenveggies.com/wp-content/uploads/2022/01/silken-tofu-scramble-sq.jpg"
+        alt="Tofu Scramble Picture"
+      />
+      <h2>Description</h2>
+      <p>
+        Tofu scramble is a tasty, healthy, vegan and easy to make alternative to
+        scrambles eggs. It's a great way to start your day! The recipe below is
+        very versitile, feel free to experiment with different textures and
+        ingredients to create your own version. The recipe below is enough for
+        3-4 portions.
+      </p>
+      <h2>Ingredients</h2>
+      <ul>
+        <li>1 block of firm tofu</li>
+        <li>15 baby tomatoes</li>
+        <li>100 g of fresh spinach</li>
+        <li>1 tablespoon of olive oil</li>
+        <li>100 g of brown cap mushrooms</li>
+        <li>1 green bell pepper</li>
+        <li>2 teaspoons of tumeric</li>
+        <li>2 teaspoons of black salt (kala namak)</li>
+        <li>1 medium sized onion</li>
+      </ul>
+      <h2>Steps</h2>
+      <ol>
+        <li>
+          Break up the block of tofu using your hands into as fine of a scramble
+          consitency as you like and add to a bowl
+        </li>
+        <li>
+          Add the tumeric and black salt to the scrambled tofu and mix well
+        </li>
+        <li>
+          Chop up your spinach, mushrooms, bell pepper, tomatoes and onion into
+          your preferred size
+        </li>
         <li>Preheat a medium to large skillet or pan on medium heat</li>
         <li>Add olive oil to heated pan</li>
-        <li>Fry your chopped ingredients for 5-10 minutes until they start getting carmelized</li>
-        <li>Add your scrambled tofu and continue to fry for another 10 minutes</li>
+        <li>
+          Fry your chopped ingredients for 5-10 minutes until they start getting
+          carmelized
+        </li>
+        <li>
+          Add your scrambled tofu and continue to fry for another 10 minutes
+        </li>
         <li>Remove from heat and enjoy</li>
-    </ol>
+      </ol>
+    </div>
   </body>
+  <script>
+    document.addEventListener('mousemove', function (e) {
+      var body = document.querySelector('body');
+      var div = document.createElement('div');
+      div.style.position = 'absolute';
+      div.style.left = e.clientX + 'px';
+      div.style.top = e.clientY + 'px';
+      div.style.width = `${Math.random() * 5 + 10}px`;
+      div.style.height = `${Math.random() * 5 + 10}px`;
+      div.style.backgroundColor = 'red';
+      div.style.borderRadius = '50%';
+      div.style.opacity = 1;
+      div.style.transition = 'all 0.5s ease';
+      div.style.transform = 'scale(0)';
+      body.appendChild(div);
+      // destroy the div after 1 second
+      setTimeout(function () {
+        div.style.opacity = 0;
+        div.style.transform = 'scale(3)';
+        div.style.backgroundColor = 'orange';
+      }, Math.random() * 200 + 100);
+
+      setTimeout(function () {
+        div.remove();
+      }, Math.random() * 500 + 500);
+    });
+  </script>
 </html>

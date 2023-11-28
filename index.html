@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type ="text/css" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
     <h1>Odin Recipes</h1>
-    <a href="recipes\tofu_scramble.html">Tofu Scramble</a>
-</body>
+    <a class="linkBtn" href="recipes\tofu_scramble.html">Tofu Scramble</a>
+  </body>
+  <script>
+    document.addEventListener('mousemove', function (e) {
+      var body = document.querySelector('body');
+      var div = document.createElement('div');
+      div.style.position = 'absolute';
+      div.style.left = e.clientX + 'px';
+      div.style.top = e.clientY + 'px';
+      div.style.width = `${Math.random() * 5 + 10}px`;
+      div.style.height = `${Math.random() * 5 + 10}px`;
+      div.style.backgroundColor = 'red';
+      div.style.borderRadius = '50%';
+      div.style.opacity = 1;
+      div.style.transition = 'all 0.5s ease';
+      div.style.transform = 'scale(0)';
+      body.appendChild(div);
+      // destroy the div after 1 second
+      setTimeout(function () {
+        div.style.opacity = 0;
+        div.style.transform = 'scale(3)';
+        div.style.backgroundColor = 'black';
+      }, 200);
+
+      setTimeout(function () {
+        div.remove();
+      }, 500);
+    });
+  </script>
 </html>
