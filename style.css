@@ -3,8 +3,8 @@
   cursor: default;
   background-color: transparent;
   user-select: none;
+  font-family: 'Josefin Sans', sans-serif;
 }
-/* make background color behind body and divs the same */
 
 html {
   background-color: #fccf31;
@@ -20,47 +20,50 @@ body {
   justify-content: start;
   align-items: center;
   gap: 2rem;
+  overflow-x: hidden;
 }
 
 h1 {
   color: white;
-  font-size: 6rem;
+  font-size: 5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  transition: 1s ease-in-out;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  text-align: center;
 }
 
 h2 {
-  color: white;
-  font-size: 5rem;
+  color: #ffffff;
+  font-size: 4rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-weight: bold;
 }
 
 .linkBtn {
-  color: white;
+  color: #e0611c;
   text-decoration: none;
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border: 1px solid white;
-  border-radius: 20px;
+  border-bottom: 1px solid white;
   padding: 1rem;
-  transition: 0.3s;
+  transition: 0.2s;
   cursor: pointer;
   z-index: 10;
 }
 
 .linkBtn:hover {
-  background-color: white;
-  color: #e0611c;
+  color: white;
   cursor: pointer;
+  box-shadow: 0 0 10px white;
 }
 
 p {
   font-size: 1.5rem;
-  margin-top: 5rem;
-  width: 50%;
+  margin-bottom: 1rem;
+  width: 70%;
   text-align: start;
   color: white;
   line-height: 2rem;
@@ -68,6 +71,7 @@ p {
   padding: 2rem;
   transition: 0.3s ease;
   border-radius: 20px;
+  z-index: 10;
 }
 
 p:hover {
@@ -99,10 +103,11 @@ img {
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 ul {
-  width: 30%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   background-color: #0f20bb29;
@@ -110,6 +115,7 @@ ul {
   border-radius: 20px;
   z-index: 10;
   transition: 0.3s ease;
+  z-index: 10;
 }
 
 ul:hover {
@@ -119,7 +125,7 @@ ul:hover {
 }
 
 ol {
-  width: 50%;
+  width: 70%;
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
@@ -127,6 +133,7 @@ ol {
   padding: 2rem;
   border-radius: 20px;
   transition: 0.3s ease;
+  z-index: 10;
 }
 
 ol:hover {
@@ -153,6 +160,7 @@ ol:hover {
   text-decoration: none;
   text-align: center;
   font-weight: 900;
+  z-index: 10;
 }
 
 #backBtn:hover {
@@ -164,14 +172,14 @@ ol:hover {
 img {
   border-radius: 20px;
   border: 1px solid white;
-  height: 40rem;
+  height: 90vw;
+  max-height: 40rem;
   z-index: 10;
   transition: 1s ease-in-out;
 }
 img:hover {
   transform: scale(1.1) rotate(5deg);
   transition: 0.3s;
-  cursor: pointer;
   box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
