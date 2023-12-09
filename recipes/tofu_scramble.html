@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tofu Scramble - Recipes</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
+    <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -68,43 +70,5 @@
       </ol>
     </div>
   </body>
-  <script>
-    // make every letter in the h1 cycle through the colors of the rainbow
-    var h1 = document.querySelector('h1');
-    var colors = ['red', 'orange', 'yellow', 'green', 'violet'];
-    var counter = 0;
-    setInterval(function () {
-      h1.style.color = colors[counter];
-      counter++;
-      if (counter >= colors.length) {
-        counter = 0;
-      }
-    }, Math.random() * 2000 + 2000);
-
-    document.addEventListener('mousemove', function (e) {
-      var body = document.querySelector('body');
-      var div = document.createElement('div');
-      div.style.position = 'absolute';
-      div.style.left = e.clientX + 'px';
-      div.style.top = e.clientY + 'px';
-      div.style.width = `${Math.random() * 5 + 10}px`;
-      div.style.height = `${Math.random() * 5 + 10}px`;
-      div.style.backgroundColor = 'red';
-      div.style.borderRadius = '50%';
-      div.style.opacity = 1;
-      div.style.transition = 'all 0.5s ease';
-      div.style.transform = 'scale(0.01)';
-      body.appendChild(div);
-      // destroy the div after 1 second
-      setTimeout(function () {
-        div.style.opacity = 0;
-        div.style.transform = 'scale(5)';
-        div.style.backgroundColor = 'orange';
-      }, Math.random() * 400 + 100);
-
-      setTimeout(function () {
-        div.remove();
-      }, Math.random() * 2000 + 500);
-    });
-  </script>
+  <script src="../script.js"></script>
 </html>
