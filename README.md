@@ -4,9 +4,7 @@ A recipe collection web page built with html and css for the odin project.
 
 [Live Link](https://antonharbers.github.io/odin-recipes/)
 
-## Documentation:
-
-### Folder Structure
+## Folder Structure
 
 ```
     README.md
@@ -19,30 +17,19 @@ A recipe collection web page built with html and css for the odin project.
     /.git       -> git repo
 ```
 
-### Key Concepts
+## Key Concepts
 
-#### Linking Styles and Scripts to HTML documents
+### Linking Styles and Scripts to HTML documents
 
-This project is a good introduction to the concept of using the
-
-```
-    <script>
-```
-
-and
-
-```
-    <link>
-```
-
-Tags to include scripts and styles in html documents:
+This project is a good introduction to the concept of using the <script> and <link> tags:
 
 ![Link Example](/documentation/linkExample.png)
+
 ![Script Example](/documentation/scriptExample.png)
 
 It is important to note that for some functionality the html needs to be loaded before the script. Therefor it is good practice to either append the script to the end of the html body (after the closing body tags) or to use the defer flag to let the script wait for the html to be loaded before running.
 
-#### Adding a custom font from google fonts
+### Adding a custom font from google fonts
 
 A fun sidequest was adding a custom font from google fonts. This method uses the html <link> tag in order to import the font from google fonts directly. This font can then be set in the css:
 
@@ -67,7 +54,7 @@ CSS:
 
 ```
 
-#### Adding a custom favicon
+### Adding a custom favicon
 
 Another simple thing to add some detail to a webpage is the favicon. Just import or create your own favicon.ico and place it somewhere in your folder structure. It can then be importet as follows:
 
@@ -81,7 +68,7 @@ The "rel" parameter for favicons is "icon"
 The "type" parameter for favicons is "image/x-icon"
 the "href" parameter for favicons will be the path to where the .ico file is stored in your folder structure.
 
-#### <a> Tags to link to other html documents
+### <a> Tags to link to other html documents
 
 A key part of this project was linking to certain recipes from a home directory. This is achieved using the <a> tag with the correct path being given as a parameter to the href attribute:
 
@@ -92,7 +79,7 @@ HTML:
 
 ```
 
-#### Combining selectors to apply styles
+### Combining selectors to apply styles
 
 A simple concept that can make css more readable and also improve its performance is to group certain styles to multiple selectors at once if these share attributes as i did for my body tags and ".container" class below.
 
@@ -123,7 +110,7 @@ Here most of the styles are applied to both selectors, however the body had a di
 
 This saves us having to basically have double the CSS code.
 
-#### Basic CSS Animations trigerred in Javascript
+### Basic CSS Animations trigerred in Javascript
 
 As a challange I tried to implemt some basic CSS animations using Javascript so that they can appear random and have dynamic effects based on user input.
 
@@ -172,6 +159,6 @@ JS:
     });
 ```
 
-### Final Notes
+## Final Notes
 
 This project serves as a good introduction to some important fundamentals. A basic look at how the different files and languages "speak" to each other to acheive a reactive and smooth user experience in the browser. Even with such a simple task, some more complex lessons were tackled and learned.
