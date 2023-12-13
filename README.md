@@ -2,7 +2,7 @@
 
 A recipe collection web page built with html and css for the odin project.
 
-[Live Link](https://antonharbers.github.io/odin-recipes/)
+[Live Link](https://antonharbers.github.io/Recipes-App/)
 
 ## Folder Structure
 
