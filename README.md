@@ -4,6 +4,8 @@ A recipe collection web page built with html and css for the odin project.
 
 [Live Link](https://antonharbers.github.io/Recipes-App/)
 
+![Image Of App](/images/repoImage.png)
+
 ## Folder Structure
 
 ```
@@ -13,7 +15,7 @@ A recipe collection web page built with html and css for the odin project.
     script.js   ->  Header and Mouse Trail Animation
     /recipes
         tofu_scramble.html -> Tofu Scramble Recipe Page
-    /images     -> contains the favicon.ico
+    /images     -> contains the favicon.ico and the repo Image
     /.git       -> git repo
 ```
 
