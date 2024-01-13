@@ -35,9 +35,8 @@ It is important to note that for some functionality the html needs to be loaded 
 
 A fun sidequest was adding a custom font from google fonts. This method uses the html <link> tag in order to import the font from google fonts directly. This font can then be set in the css:
 
-HTML:
 
-```
+```html
     <!-- This goes into the HEAD of your HTML document -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,9 +46,7 @@ HTML:
     />
 ```
 
-CSS:
-
-```
+```css
     * {
         font-family: 'Josefin Sans', sans-serif;
     }
@@ -60,9 +57,8 @@ CSS:
 
 Another simple thing to add some detail to a webpage is the favicon. Just import or create your own favicon.ico and place it somewhere in your folder structure. It can then be importet as follows:
 
-HTML:
 
-```
+```html
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
 ```
 
@@ -74,9 +70,7 @@ the "href" parameter for favicons will be the path to where the .ico file is sto
 
 A key part of this project was linking to certain recipes from a home directory. This is achieved using the <a> tag with the correct path being given as a parameter to the href attribute:
 
-HTML:
-
-```
+```html
       <a class="linkBtn" href="recipes\tofu_scramble.html">Tofu Scramble</a>
 
 ```
@@ -85,9 +79,7 @@ HTML:
 
 A simple concept that can make css more readable and also improve its performance is to group certain styles to multiple selectors at once if these share attributes as i did for my body tags and ".container" class below.
 
-CSS:
-
-```
+```css
     body,
     .container {
     display: flex;
@@ -118,9 +110,8 @@ As a challange I tried to implemt some basic CSS animations using Javascript so 
 
 First I create an array of colors with a counter (this will be used to cycle through the array) and create variables for the h1 and the body html elements in the document.
 
-JS:
 
-```
+```javascript
     // Variable declaration
     let h1 = document.querySelector('h1');
     let body = document.querySelector('body');
@@ -131,9 +122,8 @@ JS:
 
 In order for the H1 Element to cycle through the colors array I added the following Interval that just cycles through them and increases the counter (or sets it back to 0) after each Interval function call.
 
-JS:
 
-```
+```javascript
     setInterval(function () {
     h1.style.color = colors[counter];
     counter >= colors.length ? (counter = 0) : counter++;
@@ -142,9 +132,8 @@ JS:
 
 For the trailing mouse effect I create a div whenever the user moves the mouse. I apply some initial styles to it using the initStyles() function and then make some changes to the styles after some random time and then make sure to remove the divs from the dom after some more time has passed.
 
-JS:
 
-```
+```js
     document.addEventListener('mousemove', function (e) {
     let div = document.createElement('div');
     initStyles(div, e);
